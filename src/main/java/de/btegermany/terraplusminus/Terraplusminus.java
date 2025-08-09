@@ -2,9 +2,7 @@ package de.btegermany.terraplusminus;
 
 
 import com.mojang.brigadier.Command;
-import de.btegermany.terraplusminus.commands.OffsetCommand;
-import de.btegermany.terraplusminus.commands.TpllCommand;
-import de.btegermany.terraplusminus.commands.WhereCommand;
+import de.btegermany.terraplusminus.commands.*;
 import de.btegermany.terraplusminus.events.PlayerJoinEvent;
 import de.btegermany.terraplusminus.events.PlayerMoveEvent;
 import de.btegermany.terraplusminus.events.PluginMessageEvent;
@@ -258,6 +256,8 @@ public final class Terraplusminus extends JavaPlugin implements Listener {
             commands.register("tpll", "Teleports you to longitude and latitude", List.of("tpc"), new TpllCommand());
             commands.register("where", "Gives you the longitude and latitude of your minecraft coordinates", new WhereCommand());
             commands.register("offset", "Displays the x,y and z offset of your world", new OffsetCommand());
+            commands.register("performance", "Displays performance measures for t-- in the console", new Performance());
+            commands.register("configchanged", "Applies the http config for concurrent requests", new ConfigChanged());
         });
     }
 }

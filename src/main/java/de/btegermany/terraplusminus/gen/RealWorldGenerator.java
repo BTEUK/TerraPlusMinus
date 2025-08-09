@@ -101,7 +101,6 @@ public class RealWorldGenerator extends ChunkGenerator {
                 "minecraft:gray_concrete", ConfigurationHelper.getMaterial(Terraplusminus.config, "road_material", GRAY_CONCRETE_POWDER),
                 "minecraft:dirt_path", ConfigurationHelper.getMaterial(Terraplusminus.config, "path_material", MOSS_BLOCK)
         );
-
     }
 
 
